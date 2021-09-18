@@ -23,7 +23,7 @@ dependencies {
 <repositories>
     <repository>
         <id>zihad-maven</id>
-        <name>zihad0maven</name>
+        <name>zihad-maven</name>
         <url>https://maven.zihad.dev</url>
     </repository>
 </repositories>
