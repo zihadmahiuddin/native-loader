@@ -9,7 +9,9 @@ loader.
 
 ```gradle
 repositories {
-  jcenter()
+  maven {
+    url = "https://maven.zihad.dev"
+  }
 }
 
 dependencies {
@@ -20,9 +22,9 @@ dependencies {
 ```xml
 <repositories>
     <repository>
-        <id>jcenter</id>
-        <name>jcenter</name>
-        <url>https://jcenter.bintray.com</url>
+        <id>zihad-maven</id>
+        <name>zihad0maven</name>
+        <url>https://maven.zihad.dev</url>
     </repository>
 </repositories>
 
@@ -72,7 +74,6 @@ For a library named `mylib`:
 
 | OS             | Architecture | File                                    |
 |----------------|--------------|-----------------------------------------|
-| Darwin (OS X*) | x86-64       | /natives/darwin/libmylib.dylib          |
 | Freebsd        | x86-64       | /natives/freebsd-x86-64/libmylib.so     |
 | Linux (glibc)  | aarch64      | /natives/linux-aarch64/libmylib.so      |
 | Linux (glibc)  | arm          | /natives/linux-arm/libmylib.so          |
@@ -82,8 +83,6 @@ For a library named `mylib`:
 | Linux (musl)   | x86-64       | /natives/linux-musl-x86-64/libmylib.so  |
 | Windows        | x86          | /natives/win-x86/mylib.dll              |
 | Windows        | x86-64       | /natives/win-x86-64/mylib.dll           |
-
-* OS X natives don't have the architecture in the path, only the OS
 
 # Customizing the loading
 
